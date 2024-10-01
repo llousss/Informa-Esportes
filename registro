@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Informa Esportes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/fotos-premium/campo-de-futebol-de-fundo-de-grama-verde_41969-7902.jpg');
+            background-size: cover;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #006400;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #006400;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 5px 0 20px 0;
+            font-weight: normal;
+            color: #006400;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border: 2px solid #006400;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .error {
+            color: red;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informa Esportes</h1>
+        <h2>Registro de Usuário</h2>
+    </header>
+    
+    <div class="container">
+        <form id="formRegistro">
+            <h1>Criar Conta</h1>
+            <p>Preencha os campos abaixo para se registrar no Informa Esportes.</p>
+            
+            <label for="nome">*Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            
+            <label for="email">*E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            
+            <label for="senha">*Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
+            
+            <label for="confirmarSenha">*Confirmar Senha:</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+            
+            <input type="submit" value="Registrar">
+            <p id="feedback" class="error"></p>
+        </form>
+
+        <script>
+            document.getElementById('formRegistro').addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+
+                var nome = document.getElementById('nome').value.trim();
+                var email = document.getElementById('email').value.trim();
+                var senha = document.getElementById('senha').value.trim();
+                var confirmarSenha = document.getElementById('confirmarSenha').value.trim();
+                var feedback = document.getElementById('feedback');
+
+                // Validação básica do formulário
+                if (!nome || !email || !senha || !confirmarSenha) {
+                    feedback.textContent = "Todos os campos marcados com * são obrigatórios.";
+                } else if (senha !== confirmarSenha) {
+                    feedback.textContent = "As senhas não coincidem.";
+                } else {
+                    feedback.textContent = "";
+
+                    // Exemplo de como tratar os dados (aqui seria a parte de integração com o backend)
+                    alert('Usuário registrado com sucesso!');
+
+                    // Redireciona para a página inicial
+                    window.location.href = 'trabalho1.html'; // Altere para o nome correto do arquivo da sua página inicial
+                    
+                    // Limpa os campos do formulário
+                    document.getElementById('formRegistro').reset();
+                }
+            });
+        </script>
+    </div>
+    
+    <footer>
+        &copy; 2024 Informa Esportes
+    </footer>
+</body>
+</html>
