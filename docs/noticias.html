@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Notícia - Informa Esportes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/fotos-premium/campo-de-futebol-de-fundo-de-grama-verde_41969-7902.jpg');
+            background-size: cover;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #006400;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #006400;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 5px 0 20px 0;
+            font-weight: normal;
+            color: #006400;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #006400;
+            border-radius: 4px;
+            background-color: #333;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+            color: #006400;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        form input[type="submit"] {
+            background-color: #006400;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        form input[type="submit"]:hover {
+            background-color: #004b23;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        /* Estilo do botão de voltar */
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #006400;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            border: none;
+        }
+        .btn-voltar:hover {
+            background-color: #004b23;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informa Esportes</h1>
+        <h2>Adicionar Notícia</h2>
+    </header>
+
+    <div class="container">
+        <!-- Botão para voltar para a página principal -->
+        <a href="trabalho1.html" class="btn-voltar">Voltar para a Página Principal</a>
+
+        <form id="formNoticia">
+            <h2>Envie uma nova notícia</h2>
+            <label for="titulo">*Título da Notícia:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Digite o título da notícia" required>
+
+            <label for="conteudo">*Conteúdo da Notícia:</label>
+            <textarea id="conteudo" name="conteudo" placeholder="Escreva o conteúdo da notícia aqui" required></textarea>
+
+            <label for="fonte">*Link da Fonte:</label>
+            <input type="url" id="fonte" name="fonte" placeholder="Digite o link da fonte da notícia" required>
+
+            <label for="categoria">Categoria (Opcional):</label>
+            <input type="text" id="categoria" name="categoria" placeholder="Ex: Futebol, Basquete">
+
+            <input type="submit" value="Enviar Notícia">
+            <p id="feedback" class="error"></p>
+        </form>
+<section id="news" class="news-list">
+    <h2>Notícias Recentes</h2>
+    <div id="noticiasContainer">
+        <!-- As notícias serão carregadas aqui -->
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const noticias = JSON.parse(localStorage.getItem('noticias')) || [];
+        const noticiasContainer = document.getElementById('noticiasContainer');
+
+        noticias.forEach(noticia => {
+            const noticiaDiv = document.createElement('div');
+            noticiaDiv.classList.add('news-item');
+            noticiaDiv.innerHTML = `
+                <h3>${noticia.titulo}</h3>
+                <p>${noticia.conteudo}</p>
+                <a href="#" class="btn-ver-mais">Ver mais</a>
+            `;
+            noticiasContainer.appendChild(noticiaDiv);
+        });
+    });
+</script>
+
+        <script>
+            document.getElementById('formNoticia').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var titulo = document.getElementById('titulo').value.trim();
+                var conteudo = document.getElementById('conteudo').value.trim();
+                var fonte = document.getElementById('fonte').value.trim();
+                var categoria = document.getElementById('categoria').value.trim();
+                var feedback = document.getElementById('feedback');
+
+                if (!titulo || !conteudo || !fonte) {
+                    feedback.textContent = "O título, o conteúdo e o link da fonte são obrigatórios.";
+                } else {
+                    feedback.textContent = "";
+                    // Adiciona a notícia a um contêiner de notícias (pode ser customizado conforme o sistema)
+                    console.log("Notícia adicionada:", {titulo, conteudo, fonte, categoria});
+                    document.getElementById('formNoticia').reset();
+                }
+            });
+        </script>
+    </div>
+
+    <footer>
+        &copy; 2024 Informa Esportes
+    </footer>
+</body>
+</html>
