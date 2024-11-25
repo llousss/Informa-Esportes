@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/adicionar.css">
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <title>Adicionar Notícia</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1 class="titulo">Informa Esportes</h1>
+            <p class="subtitulo">Adicione notícias e contribua com a nossa comunidade</p>
+        </div>
+    </header>
+
+    <main class="content">
+        <h2>Adicionar Notícia</h2>
+        <p>Preencha os campos abaixo para adicionar uma nova notícia ao site:</p>
+
+        <form id="adicionar-noticia-form" class="formulario">
+            <div class="form-group">
+                <label for="nome-adicionador">Seu Nome:</label>
+                <input type="text" id="nome-adicionador" name="nome-adicionador" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fonte-noticia">Fonte da Notícia:</label>
+                <input type="url" id="fonte-noticia" name="fonte-noticia" placeholder="URL da fonte (ex.: https://...)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tema-noticia">Tema da Notícia:</label>
+                <input type="text" id="tema-noticia" name="tema-noticia" placeholder="Ex.: Futebol, Basquete, etc." required>
+            </div>
+
+            <div class="form-group">
+                <label for="titulo-noticia">Título da Notícia:</label>
+                <input type="text" id="titulo-noticia" name="titulo-noticia" placeholder="Título da notícia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="texto-noticia">Texto da Notícia:</label>
+                <textarea id="texto-noticia" name="texto-noticia" rows="5" placeholder="Escreva aqui o texto da notícia..." required></textarea>
+            </div>
+
+            <button type="submit" class="botao">Adicionar Notícia</button>
+        </form>
+
+        <div id="login-reminder" class="hidden">
+            <p>Você precisa estar logado para adicionar uma notícia.</p>
+            <a href="login.html" class="botao">Entrar</a>
+            <a href="registro.html" class="botao">Registrar-se</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="maisnoticias.html"><button class="botao">Ver Notícias</button></a>
+    </footer>
+
+    <script src="../javascript/javascript.js"></script>
+</body>
+</html>
