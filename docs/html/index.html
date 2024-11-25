@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/Icons8-Windows-8-Sports-Football-2.ico" type="image/x-icon">
+    <title>Informa Esportes</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <script src="../javascript/javascript.js"></script>
+
+    <header>
+        <div class="header-top">
+            <h1 class="titulo">Informa Esportes</h1>
+            <p class="subtitulo">As últimas notícias sobre esportes</p>
+        </div>
+    </header>
+
+    <div class="user-actions">
+        <a href="login.html" class="botao">Entrar</a>
+        <a href="registro.html" class="botao">Registrar-se</a>
+    </div>
+
+    <main class="content">
+        <h2>Bem-vindo ao Informa Esportes!</h2>
+        <p>Fique por dentro das últimas notícias.</p>
+        
+        <section class="noticias">
+            <div class="card-noticia">
+                <h3>Vini Jr. e o racismo no futebol</h3>
+                <p>À CNN, Vini Jr. revela que o Real Madrid cogita deixar o campo em caso de racismo...</p>
+                <div class="acoes-noticia">
+                    <button class="ver-mais" data-noticia="1">Ver mais</button>
+                    <a href="https://www.cnnbrasil.com.br/esportes/futebol/futebol-internacional/futebol-espanhol/a-cnn-vini-jr-revela-que-real-madrid-cogita-deixar-campo-em-caso-de-racismo/#:~:text=Porque%2C%20se%20as%20coisas%20n%C3%A3o,o%20atacante%20do%20Real%20Madrid." 
+                       target="_blank" rel="external" class="link-noticia">Ver fonte</a>
+                </div>
+            </div>
+            
+            <div class="card-noticia">
+                <h3>Desafio testado na Copa do Mundo Feminina Sub-20</h3>
+                <p>Alternativa econômica ao VAR, "desafio" é testado na Copa do Mundo Feminina Sub-20...</p>
+                <div class="acoes-noticia">
+                    <button class="ver-mais" data-noticia="2">Ver mais</button>
+                    <a href="https://www.cnnbrasil.com.br/esportes/futebol/futebol-internacional/alternativa-economica-ao-var-desafio-e-testado-na-copa-do-mundo-feminina-sub-20/#:~:text=eSports-,Alternativa%20econ%C3%B4mica%20ao%20VAR%2C%20%E2%80%9Cdesafio%E2%80%9D%20%C3%A9%20testado%20na%20Copa,do%20Mundo%20Feminina%20Sub%2D20&text=O%20Football%20Video%20Support%20Assistant,(V%2DA)%20na%20Copa%20do%20Mundo." 
+                    target="_blank" rel="external" class="link-noticia">Ver fonte</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal para "Ver mais" -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <a href="maisnoticias.html"><button class="botao">Mais Notícias</button></a>
+            <a href="adicionar.html" rel="next"><button class="botao">Adicionar Notícia</button></a>
+        </div>
+    </footer>
+</body>
+</html>
