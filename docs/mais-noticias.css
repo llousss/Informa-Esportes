@@ -1,0 +1,142 @@
+/* Estilos Globais */
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #034d2b;
+    background: url(../html/assets/img/fundonovo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(0, 80, 0, 0.9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-top {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.titulo {
+    font-size: 2.5em;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Conteúdo Principal */
+.noticias-container {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-secao {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #034d2b;
+    text-align: center;
+}
+
+/* Lista de Notícias */
+.noticias-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.noticia-card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.noticia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.noticia-titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #034d2b;
+}
+
+.noticia-tema {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.noticia-texto {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.ler-mais {
+    font-size: 0.9em;
+    color: #034d2b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ler-mais:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgb(0, 80, 0);
+    color: white;
+    font-size: 0.9em;
+    position: relative;
+}
+
+.botoes-rodape {
+    margin-bottom: 10px;
+}
+
+.botao-rodape {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: rgb(0, 80, 0);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-rodape:hover {
+    background: #026339;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/Icons8-Windows-8-Sports-Football-2.ico" type="image/x-icon">
+    <title>Recuperação de Senha - Informa Esportes</title>
+    <link rel="stylesheet" href="../CSS/recuperacao.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1 class="titulo">Informa Esportes</h1>
+            <p class="subtitulo">Recupere sua senha</p>
+        </div>
+    </header>
+
+    <div class="recuperacao-container">
+        <div class="recuperacao-card">
+            <h1>Esqueceu sua senha?</h1>
+            <p>Digite seu email abaixo e enviaremos instruções para redefinir sua senha.</p>
+            <form action="recuperacao-enviada.html" method="POST" class="recuperacao-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                </div>
+                <button type="submit" class="botao">Enviar Instruções</button>
+            </form>
+            <a href="login.html" class="botao voltar">Voltar ao Login</a>
+        </div>
+    </div>
+</body>
+</html>
