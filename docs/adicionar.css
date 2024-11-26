@@ -50,9 +50,9 @@ textarea {
     padding: 10px 20px;
 }
 
-/* botoes principais */
-.botao-rodape {
-    display: inline-block; /* Garante que os botões tenham comportamento de bloco */
+/* Estilos para links com aparência de botões */
+.botao-link {
+    display: inline-block;
     padding: 10px 20px;
     background-color: rgb(0, 80, 0); /* Cor de fundo */
     color: white; /* Cor do texto */
@@ -65,6 +65,6 @@ textarea {
     transition: background-color 0.3s ease; /* Animação ao passar o mouse */
 }
 
-.botao-rodape:hover {
+.botao-link:hover {
     background-color: #026339; /* Cor de fundo ao passar o mouse */
 }
