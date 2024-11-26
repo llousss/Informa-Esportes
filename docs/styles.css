@@ -105,6 +105,44 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* conteiner de açoes dos botoes */
+.acoes-noticia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ver-mais {
+    background: #034d2b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.ver-mais:hover {
+    background: #026339;
+}
+
+.link-noticia {
+    background: #034d2b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.link-noticia:hover {
+    background: #026339;
+    color: white;
+}
+
 /* Modal */
 .modal {
     position: fixed;
