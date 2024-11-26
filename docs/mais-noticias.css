@@ -50,7 +50,7 @@ header {
     z-index: 100;
 }
 
-.botao-rodape {
+.botao {
     display: inline-block;
     padding: 10px 20px;
     background: rgb(0, 80, 0);
@@ -63,7 +63,7 @@ header {
     cursor: pointer;
 }
 
-.botao-rodape:hover {
+.botao:hover {
     background: #026339;
 }
 
