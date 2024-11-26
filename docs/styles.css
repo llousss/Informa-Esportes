@@ -43,33 +43,42 @@ header {
     padding: 10px 20px;
 }
 
+/* Botões principais */
 .botao {
+    display: inline-block; /* Garante que os botões tenham comportamento de bloco */
     padding: 10px 20px;
-    background: rgb(0, 80, 0);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
+    background-color: rgb(0, 80, 0); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
     font-size: 1em;
-    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado */
+    cursor: pointer; /* Adiciona cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Animação ao passar o mouse */
 }
 
 .botao:hover {
-    background: #026339;
+    background-color: #026339; /* Cor de fundo ao passar o mouse */
 }
 
+/* Botão como link */
 .botao-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgb(0, 80, 0); /* Corrigido o parêntese */
-    color: white;
-    text-decoration: none;
+    background-color: rgb(0, 80, 0); /* Cor de fundo corrigida */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
     border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Efeito de transição */
 }
 
 .botao-link:hover {
-    background-color: #026339;
+    background-color: #026339; /* Cor de fundo ao passar o mouse */
 }
+
 
 /* Conteúdo principal */
 .content {
