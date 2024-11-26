@@ -40,6 +40,33 @@ header {
     opacity: 0.8;
 }
 
+/* botoes entrar e registrar-se */
+.user-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    position: sticky;
+    z-index: 100;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(0, 80, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #026339;
+}
+
 /* conteudo principal */
 .noticias-container {
     flex-grow: 1;
