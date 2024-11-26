@@ -91,11 +91,12 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Notícias */
+/* noticia */
 .noticias {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .card-noticia {
@@ -157,6 +158,61 @@ header {
     opacity: 0;
     transition: opacity 0.3s ease, bottom 0.3s ease;
     z-index: 1000;
+}
+
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0; /* move o modal para dentro da tela */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    animation: slide-up 0.5s ease forwards;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* animação de subir */
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* escurecer o fundo */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Rodapé */
