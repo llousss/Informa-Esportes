@@ -16,7 +16,7 @@ body {
     flex-direction: column;
 }
 
-/* cabeçalho da pagina */
+/* cabeçalho */
 header {
     background-color: rgba(0, 80, 0, 0.9);
     color: white;
@@ -57,6 +57,7 @@ header {
     text-align: center;
 }
 
+/* lista de noticias */
 .noticias-lista {
     display: flex;
     flex-wrap: wrap;
@@ -110,7 +111,7 @@ header {
     text-decoration: underline;
 }
 
-/* rodape */
+/* Rodapé */
 footer {
     text-align: center;
     padding: 20px 0;
@@ -165,3 +166,4 @@ footer {
     color: rgb(0, 80, 0);
     font-weight: bold;
 }
+
