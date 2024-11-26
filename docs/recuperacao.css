@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Estilos Globais */
+/* estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
     flex-direction: column;
 }
 
-/* Cabeçalho */
+/* cabeçalho */
 header {
     background-color: rgba(0, 80, 0, 0.9);
     color: white;
@@ -40,7 +40,7 @@ header {
     opacity: 0.8;
 }
 
-/* Recuperação de Senha */
+/* recuperação de senha */
 .recuperacao-container {
     flex-grow: 1;
     display: flex;
@@ -99,7 +99,7 @@ header {
     box-shadow: 0 0 5px rgba(3, 77, 43, 0.5);
 }
 
-/* Botões */
+/* botoes */
 .botao {
     width: 100%;
     padding: 10px;
