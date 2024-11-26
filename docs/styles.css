@@ -67,6 +67,19 @@ header {
     background: #026339;
 }
 
+.botao-link {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.botao-link:hover {
+    background-color: #0056b3;
+}
+
 /* conteudo principal */
 .content {
     flex-grow: 1;
